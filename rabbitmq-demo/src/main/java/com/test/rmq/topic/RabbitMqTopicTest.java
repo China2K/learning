@@ -1,4 +1,4 @@
-package com.test.rmq;
+package com.test.rmq.topic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,14 +8,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RabbitMqHelloTest {
+public class RabbitMqTopicTest {
 
     @Autowired
-    private HelloSender helloSender;
-
+    private TopicSender topicSender;
+    
     @Test
     public void hello() throws Exception {
-        helloSender.send();
+    	/*topicSender.send();*/
+    	topicSender.send2();
     }
 
 }
